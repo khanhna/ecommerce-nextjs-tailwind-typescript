@@ -1,6 +1,8 @@
 # Ecommerce NextJs with tailwind template
 
-This is a lightweight project include some basic flow for a ecommerce site. It's pure Frontend side with data sample data located locally.
+This is a lightweight project include some basic flow for a ecommerce site. It's pure Frontend side with data sample data located locally, and it's responsive.
+
+<a href="https://nextveclan.netlify.app">Live Demo</a>
 
 ## Library stack using:
 
@@ -10,6 +12,7 @@ This is a lightweight project include some basic flow for a ecommerce site. It's
 - Redux persist
 - React-hook-form
 - Decoders
+- Typescript
 
 ## Getting Started
 
