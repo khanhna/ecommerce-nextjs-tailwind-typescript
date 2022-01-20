@@ -1,0 +1,73 @@
+/* Radio input */
+
+[type="radio"]:not(:checked) + label > div:last-child {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked + label > div:last-child {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Checkbox input */
+
+[type="checkbox"]:checked + label span:first-child {
+  background: #000;
+  border-color: #000;
+  animation: cb-zoom-in-out 0.2s ease;
+}
+
+[type="checkbox"]:checked + label span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+@keyframes cb-zoom-in-out {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+/* Hidden after transition */
+
+.hidden-after-transition {
+  -moz-animation-name: delayHidden;
+  -webkit-animation-name: delayHidden;
+  -ms-animation-name: delayHidden;
+  animation-name: delayHidden;
+  -moz-animation-duration: 300ms;
+  -webkit-animation-duration: 300ms;
+  -ms-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -moz-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-moz-keyframes delayHidden { 
+  0% { opacity: 1; visibility: visible; } 
+  75% { opacity: 0.2; visibility: visible; } 
+  100% { opacity: 0; visibility: hidden; }
+}
+@-webkit-keyframes delayHidden { 
+  0% { opacity: 1; visibility: visible; } 
+  75% { opacity: 0.2; visibility: visible; } 
+  100% { opacity: 0; visibility: hidden; }
+}
+@-ms-keyframes delayHidden { 
+  0% { opacity: 1; visibility: visible; } 
+  75% { opacity: 0.2; visibility: visible; } 
+  100% { opacity: 0; visibility: hidden; }
+}
+@-keyframes delayHidden { 
+  0% { opacity: 1; visibility: visible; } 
+  75% { opacity: 0.2; visibility: visible; } 
+  100% { opacity: 0; visibility: hidden; }
+}

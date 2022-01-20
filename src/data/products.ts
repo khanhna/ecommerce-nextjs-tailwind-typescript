@@ -1,0 +1,546 @@
+export const ROUTE_PRODUCT_LIST_PREFIX = '/products';
+
+export type ProductCategory = 'accessories' | 'cables' | 'dac-amp' | 'earbuds' | 'in-ear' | 'not-by-ve' | 'omega';
+type ProductCategoryDisplay = 'Accessories' | 'Cables' | 'Dac&amp' | 'Earbuds' | 'In-ear' | 'Not By VE' | 'Omega';
+
+export const homeBanner = [
+  {
+    imageUrl: '/images/home-banners/001_monk_slim_metal.jpg',
+    alt: 'Monk slim metal',
+    productUrl: `${ROUTE_PRODUCT_LIST_PREFIX}/monk-slim-metal`,
+  },
+  {
+    imageUrl: '/images/home-banners/002_avani.jpg',
+    alt: 'Avani',
+    productUrl: `${ROUTE_PRODUCT_LIST_PREFIX}/avani`,
+  },
+  {
+    imageUrl: '/images/home-banners/003_asura_30FE.jpg',
+    alt: 'Asura FE 3.0',
+    productUrl: `${ROUTE_PRODUCT_LIST_PREFIX}/asura-30`,
+  },
+  {
+    imageUrl: '/images/home-banners/004_abigail.jpg',
+    alt: 'Abigail',
+    productUrl: `${ROUTE_PRODUCT_LIST_PREFIX}/abigail`,
+  },
+  {
+    imageUrl: '/images/home-banners/005_bonus_ie.jpg',
+    alt: 'Bonus IE',
+    productUrl: `${ROUTE_PRODUCT_LIST_PREFIX}/bonus-ie`,
+  },
+];
+
+type ProductNavigateItem = {
+  subPath: string;
+  displayName: string;
+  category: ProductCategory;
+};
+
+export const productNavigate: ProductNavigateItem[] = [
+  {
+    subPath: '/earbuds',
+    displayName: 'Earbuds',
+    category: 'earbuds',
+  },
+  {
+    subPath: '/Omega',
+    displayName: 'Omega',
+    category: 'omega',
+  },
+  {
+    subPath: '/in-ear',
+    displayName: 'In-ear',
+    category: 'in-ear',
+  },
+  {
+    subPath: '/dac-amp',
+    displayName: 'Dac&Amp',
+    category: 'dac-amp',
+  },
+  {
+    subPath: '/cables',
+    displayName: 'Cables',
+    category: 'cables',
+  },
+  {
+    subPath: '/accessories',
+    displayName: 'Accessories',
+    category: 'accessories',
+  },
+  {
+    subPath: '/not-by-ve',
+    displayName: 'NOT by VE',
+    category: 'not-by-ve',
+  },
+];
+
+export type ProductDetail = {
+  category: ProductCategory;
+  categoryDisplay: ProductCategoryDisplay;
+  productDetailSlug: string;
+  thumbNail: string;
+  images: string[];
+  name: string;
+  variants: string[];
+  createdTime: string;
+  description?: string;
+  minPrice?: number;
+  maxPrice?: number;
+};
+
+export const productData: ProductDetail[] = [
+  {
+    category: 'accessories',
+    categoryDisplay: 'Accessories',
+    productDetailSlug: 'ex-pack-4oe',
+    thumbNail: '/images/products/accessories/EXPack4OE/001.jpg',
+    images: [
+      '/images/products/accessories/EXPack4OE/001.jpg',
+      '/images/products/accessories/EXPack4OE/002.jpg',
+      '/images/products/accessories/EXPack4OE/003.jpg',
+      '/images/products/accessories/EXPack4OE/004.jpg',
+    ],
+    name: 'EXPack4OE',
+    variants: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'B', 'C', 'D', 'E', 'ABCDE'],
+    createdTime: '2021-01-06T02:01:12.150Z',
+    description:
+      'This will only be given as long as we have the stock of the freebies.\n As the master of all foams, We just had to make our own on-ear foams too.\n Hope you all can enjoy them!',
+    minPrice: 5.0,
+    maxPrice: 40.0,
+  },
+  {
+    category: 'accessories',
+    categoryDisplay: 'Accessories',
+    productDetailSlug: 'ex-pack',
+    thumbNail: '/images/products/accessories/ex-pack/001.jpg',
+    images: [
+      '/images/products/accessories/ex-pack/001.jpg',
+      '/images/products/accessories/ex-pack/002.jpg',
+      '/images/products/accessories/ex-pack/003.jpg',
+    ],
+    name: 'Ex-pack',
+    variants: ['Ex-pack', 'Ex-pack Lite'],
+    createdTime: '2021-01-09T02:01:12.150Z',
+    minPrice: 3.0,
+    maxPrice: 5.0,
+  },
+  {
+    category: 'cables',
+    categoryDisplay: 'Cables',
+    productDetailSlug: 'adapter-cable',
+    thumbNail: '/images/products/cables/adapter_cable/001.jpg',
+    images: [
+      '/images/products/cables/adapter_cable/001.jpg',
+      '/images/products/cables/adapter_cable/002.jpg',
+      '/images/products/cables/adapter_cable/003.jpg',
+    ],
+    name: 'Adapter Cables',
+    variants: ['2.5mm TRRS Female', '3.5mm TRRS Female', '4.4MM Female', '3.5mm SE'],
+    createdTime: '2021-01-22T02:01:12.150Z',
+    minPrice: 10.0,
+    maxPrice: 30.0,
+  },
+  {
+    category: 'cables',
+    categoryDisplay: 'Cables',
+    productDetailSlug: 'copper-lite-cable',
+    thumbNail: '/images/products/cables/basic_di_copper_lite/001.jpg',
+    images: [
+      '/images/products/cables/basic_di_copper_lite/001.jpg',
+      '/images/products/cables/basic_di_copper_lite/002.jpg',
+    ],
+    name: 'Basic DI copper lite',
+    variants: ['3.5SE', '2.5TRRS', '4.4TRRRS'],
+    createdTime: '2021-02-03T02:01:12.150Z',
+    minPrice: 30.0,
+    maxPrice: 60.0,
+  },
+  {
+    category: 'cables',
+    categoryDisplay: 'Cables',
+    productDetailSlug: 'customize-cable',
+    thumbNail: '/images/products/cables/customize/001.jpg',
+    images: ['/images/products/cables/customize/001.jpg'],
+    name: 'Customized Cable',
+    variants: ['Headphone Cables', 'Adapter Cables', 'Inter-Connect Cables'],
+    description: 'All of the customized Cables have one month warranty from delivery',
+    createdTime: '2021-02-14T02:01:12.150Z',
+  },
+  {
+    category: 'cables',
+    categoryDisplay: 'Cables',
+    productDetailSlug: 'premium-silver-plated-copper-cable',
+    thumbNail: '/images/products/cables/premium_silver_plated_copper/001.jpg',
+    images: [
+      '/images/products/cables/premium_silver_plated_copper/001.jpg',
+      '/images/products/cables/premium_silver_plated_copper/002.jpg',
+      '/images/products/cables/premium_silver_plated_copper/003.jpg',
+      '/images/products/cables/premium_silver_plated_copper/004.jpg',
+      '/images/products/cables/premium_silver_plated_copper/005.jpg',
+    ],
+    name: 'Premium Silver Plated Copper',
+    variants: ['0.78mm 2Pin', 'MMCX'],
+    description: '7x9x0.06mm per wire ，Silver Plated 6n OFC. \nAll of our headphone cable are 1.2m length.',
+    createdTime: '2021-02-25T02:01:12.150Z',
+    minPrice: 298.0,
+  },
+  {
+    category: 'cables',
+    categoryDisplay: 'Cables',
+    productDetailSlug: 'standard-copper-cable',
+    thumbNail: '/images/products/cables/standard_di_copper_lite/001.jpg',
+    images: [
+      '/images/products/cables/standard_di_copper_lite/001.jpg',
+      '/images/products/cables/standard_di_copper_lite/002.jpg',
+      '/images/products/cables/standard_di_copper_lite/003.jpg',
+    ],
+    name: 'Standard DI Copper',
+    variants: ['0.78mm 2Pin', 'MMCX'],
+    description:
+      'We also have 3.5trrs version.\nIf you want 3.5trrs, please contact us.\nPlease note that 3.5trrs only can be used on Particular Digital Player, not for cellphone or PC. 3.5SE is the typical jack on cellphone, PC and digital player.',
+    createdTime: '2021-02-25T02:01:12.150Z',
+    minPrice: 158.0,
+  },
+  {
+    category: 'cables',
+    categoryDisplay: 'Cables',
+    productDetailSlug: 'ultra-budget-cable',
+    thumbNail: '/images/products/cables/ultra_budget/001.jpg',
+    images: ['/images/products/cables/ultra_budget/001.jpg'],
+    name: 'Ultra budget cables',
+    variants: ['0.78mm 2Pin', 'MMCX'],
+    description:
+      'We also have 3.5trrs version.\nIf you want 3.5trrs, please contact us.\nPlease note that 3.5trrs only can be used on Particular Digital Player, not for cellphone or PC. 3.5SE is the typical jack on cellphone, PC and digital player.',
+    createdTime: '2021-03-20T02:01:12.150Z',
+    minPrice: 10.0,
+    maxPrice: 20.0,
+  },
+  {
+    category: 'dac-amp',
+    categoryDisplay: 'Dac&amp',
+    productDetailSlug: 'defiant',
+    thumbNail: '/images/products/dac-amp/defiant/001.jpg',
+    images: [
+      '/images/products/dac-amp/defiant/001.jpg',
+      '/images/products/dac-amp/defiant/002.jpg',
+      '/images/products/dac-amp/defiant/003.jpg',
+      '/images/products/dac-amp/defiant/004.jpg',
+    ],
+    name: 'Defiant',
+    variants: ['Black', 'Grey', 'Gold'],
+    description:
+      "We only send parcels by Aliexpress now. All the shipping may delay, it's because of the Virus. Please make order on our Aliexpress store. Their shipping has insurrance",
+    createdTime: '2021-09-10T02:01:12.150Z',
+    minPrice: 1298.0,
+    maxPrice: 1798.0,
+  },
+  {
+    category: 'dac-amp',
+    categoryDisplay: 'Dac&amp',
+    productDetailSlug: 'enterprise-e-lite',
+    thumbNail: '/images/products/dac-amp/enterprise-e-lite/001.jpg',
+    images: ['/images/products/dac-amp/enterprise-e-lite/001.jpg'],
+    name: 'Enterprise E Lite',
+    variants: ['Standard'],
+    createdTime: '2021-04-04T02:01:12.150Z',
+    minPrice: 2560.0,
+  },
+  {
+    category: 'dac-amp',
+    categoryDisplay: 'Dac&amp',
+    productDetailSlug: 'megatron',
+    thumbNail: '/images/products/dac-amp/megatron/001.jpg',
+    images: [
+      '/images/products/dac-amp/megatron/001.jpg',
+      '/images/products/dac-amp/megatron/002.jpg',
+      '/images/products/dac-amp/megatron/003.jpg',
+    ],
+    name: 'Megatron',
+    variants: ['With MP Black Coffee 3.5SE', 'With MP Black Coffee 2.5TRRS'],
+    createdTime: '2021-04-04T02:01:12.150Z',
+    minPrice: 50.0,
+  },
+  {
+    category: 'dac-amp',
+    categoryDisplay: 'Dac&amp',
+    productDetailSlug: 'ra-plus-5th',
+    thumbNail: '/images/products/dac-amp/ra_plus_5th/001.jpg',
+    images: ['/images/products/dac-amp/ra_plus_5th/001.jpg'],
+    name: 'RA PLUS 5th',
+    variants: ['Standard'],
+    description:
+      'By default, we will send 3.5SE ZEN Lite.\n If you want other plug, please leave a message after payment.',
+    createdTime: '2021-05-17T02:01:12.150Z',
+    minPrice: 148.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'asura-30',
+    thumbNail: '/images/products/earbuds/asura30/001.jpg',
+    images: [
+      '/images/products/earbuds/asura30/001.jpg',
+      '/images/products/earbuds/asura30/002.jpg',
+      '/images/products/earbuds/asura30/003.jpg',
+      '/images/products/earbuds/asura30/004.jpg',
+      '/images/products/earbuds/asura30/005.jpg',
+      '/images/products/earbuds/asura30/006.jpg',
+      '/images/products/earbuds/asura30/007.jpg',
+    ],
+    name: 'Asura 3.0FE',
+    variants: ['3.5SE', '2.5TRRS', '4.4 TRRRS'],
+    createdTime: '2021-05-21T02:01:12.150Z',
+    minPrice: 148.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'moe',
+    thumbNail: '/images/products/earbuds/moe/001.jpg',
+    images: ['/images/products/earbuds/moe/001.jpg'],
+    name: 'MOE',
+    variants: ['3.5SE', '2.5TRRS', '4.4 TRRRS'],
+    createdTime: '2021-06-11T02:01:12.150Z',
+    minPrice: 50.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'monk-lite',
+    thumbNail: '/images/products/earbuds/monk_lite/001.jpg',
+    images: [
+      '/images/products/earbuds/monk_lite/001.jpg',
+      '/images/products/earbuds/monk_lite/002.jpg',
+      '/images/products/earbuds/monk_lite/003.jpg',
+      '/images/products/earbuds/monk_lite/004.jpg',
+    ],
+    name: 'MONK LITE',
+    variants: ['Standard', 'SPC'],
+    createdTime: '2021-06-17T02:01:12.150Z',
+    minPrice: 6.0,
+    maxPrice: 20.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'monk-plus',
+    thumbNail: '/images/products/earbuds/monk_plus/001.jpg',
+    images: [
+      '/images/products/earbuds/monk_plus/001.jpg',
+      '/images/products/earbuds/monk_plus/002.jpg',
+      '/images/products/earbuds/monk_plus/003.jpg',
+      '/images/products/earbuds/monk_plus/004.jpg',
+    ],
+    name: 'MONK PLUS',
+    variants: ['Standard', 'SPC'],
+    createdTime: '2021-06-19T02:01:12.150Z',
+    minPrice: 5.0,
+    maxPrice: 20.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'monk-slim-metal',
+    thumbNail: '/images/products/earbuds/monk_slim_metal/001.jpg',
+    images: [
+      '/images/products/earbuds/monk_slim_metal/001.jpg',
+      '/images/products/earbuds/monk_slim_metal/002.jpg',
+      '/images/products/earbuds/monk_slim_metal/003.jpg',
+      '/images/products/earbuds/monk_slim_metal/004.jpg',
+      '/images/products/earbuds/monk_slim_metal/005.jpg',
+      '/images/products/earbuds/monk_slim_metal/006.jpg',
+    ],
+    name: 'Monk slim metal',
+    variants: ['3.5SE', '2.5TRRS', '4.4 TRRRS'],
+    createdTime: '2021-06-30T02:01:12.150Z',
+    minPrice: 20.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'monk-go',
+    thumbNail: '/images/products/earbuds/monkgo/001.jpg',
+    images: ['/images/products/earbuds/monkgo/001.jpg'],
+    name: 'MONK GO',
+    variants: ['3.5SE'],
+    description: 'for More info on Monk Go. plz follow our Youtube video',
+    createdTime: '2021-07-07T02:01:12.150Z',
+    minPrice: 5.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'sun',
+    thumbNail: '/images/products/earbuds/sun/001.jpg',
+    images: [
+      '/images/products/earbuds/sun/001.jpg',
+      '/images/products/earbuds/sun/002.jpg',
+      '/images/products/earbuds/sun/003.jpg',
+      '/images/products/earbuds/sun/004.jpg',
+      '/images/products/earbuds/sun/005.jpg',
+      '/images/products/earbuds/sun/006.jpg',
+      '/images/products/earbuds/sun/007.jpg',
+      '/images/products/earbuds/sun/008.jpg',
+    ],
+    name: 'Sun',
+    variants: ['Dice'],
+    createdTime: '2021-07-15T02:01:12.150Z',
+    minPrice: 298.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'zen-20',
+    thumbNail: '/images/products/earbuds/zen20/001.jpg',
+    images: [
+      '/images/products/earbuds/zen20/001.jpg',
+      '/images/products/earbuds/zen20/002.jpg',
+      '/images/products/earbuds/zen20/003.jpg',
+      '/images/products/earbuds/zen20/004.jpg',
+    ],
+    name: 'ZEN 2.0',
+    variants: ['Standard'],
+    description:
+      'The Zen 2.0 is the finest creation of our main lineup. Our Chief Sound Engineer, KK, designed the Zen 2.0 to incorporate the full sized headphone experience to an earbud',
+    createdTime: '2021-07-24T02:01:12.150Z',
+    minPrice: 148.0,
+    maxPrice: 166.0,
+  },
+  {
+    category: 'earbuds',
+    categoryDisplay: 'Earbuds',
+    productDetailSlug: 'zen-ll',
+    thumbNail: '/images/products/earbuds/zenll/001.jpg',
+    images: [
+      '/images/products/earbuds/zenll/001.jpg',
+      '/images/products/earbuds/zenll/002.jpg',
+      '/images/products/earbuds/zenll/003.jpg',
+      '/images/products/earbuds/zenll/004.jpg',
+    ],
+    name: 'Zen LL',
+    variants: ['Standard'],
+    description:
+      'The best sleeping-bud and the earbud that can easily rule the world (excluding the sun and zen series haha.)',
+    createdTime: '2021-08-05T02:01:12.150Z',
+    minPrice: 69.8,
+  },
+  {
+    category: 'in-ear',
+    categoryDisplay: 'In-ear',
+    productDetailSlug: 'bie-pro',
+    thumbNail: '/images/products/in-ear/bie_pro/001.png',
+    images: [
+      '/images/products/in-ear/bie_pro/001.png',
+      '/images/products/in-ear/bie_pro/002.jpg',
+      '/images/products/in-ear/bie_pro/003.jpg',
+      '/images/products/in-ear/bie_pro/004.jpg',
+      '/images/products/in-ear/bie_pro/005.jpg',
+      '/images/products/in-ear/bie_pro/006.jpg',
+      '/images/products/in-ear/bie_pro/007.jpg',
+    ],
+    name: 'BIE Pro',
+    variants: ['3.5SE', '2.5TRRS', '4.4 TRRRS'],
+    description:
+      'Soft & light Quad ediiton, in short SLQ, this is going to be our go to entry level hand-braided cable for all of our earphones',
+    createdTime: '2021-08-19T02:01:12.150Z',
+    minPrice: 69.8,
+    maxPrice: 178.0,
+  },
+  {
+    category: 'in-ear',
+    categoryDisplay: 'In-ear',
+    productDetailSlug: 'bonus-ie',
+    thumbNail: '/images/products/in-ear/bonus_ie/001.jpg',
+    images: [
+      '/images/products/in-ear/bonus_ie/001.jpg',
+      '/images/products/in-ear/bonus_ie/002.jpg',
+      '/images/products/in-ear/bonus_ie/003.jpg',
+      '/images/products/in-ear/bonus_ie/004.jpg',
+      '/images/products/in-ear/bonus_ie/005.png',
+      '/images/products/in-ear/bonus_ie/006.jpg',
+      '/images/products/in-ear/bonus_ie/007.png',
+      '/images/products/in-ear/bonus_ie/008.jpg',
+    ],
+    name: 'Bonus IE',
+    variants: ['3.5SE'],
+    description:
+      'The Bonus IE is our second-generation IEM that we created to make a statement in the highly competitive budget sector. With the BIE, we set out to provide an IEM that offers great price-to-performance as much as the Monk Plus',
+    createdTime: '2021-08-26T02:01:12.150Z',
+    minPrice: 20.0,
+    maxPrice: 25.0,
+  },
+  {
+    category: 'in-ear',
+    categoryDisplay: 'In-ear',
+    productDetailSlug: 'grand-duke',
+    thumbNail: '/images/products/in-ear/grand_duke/001.jpg',
+    images: [
+      '/images/products/in-ear/grand_duke/001.jpg',
+      '/images/products/in-ear/grand_duke/002.jpg',
+      '/images/products/in-ear/grand_duke/003.jpg',
+      '/images/products/in-ear/grand_duke/004.jpg',
+      '/images/products/in-ear/grand_duke/005.jpg',
+    ],
+    name: 'Grand Duke',
+    variants: ['G-1', 'G-2', 'G-3', 'G-4', 'G-5', 'G-6', 'G-7', 'G-8', 'G-9', 'G-10', 'G-11'],
+    createdTime: '2021-09-10T02:01:12.150Z',
+    minPrice: 1298.0,
+  },
+  {
+    category: 'not-by-ve',
+    categoryDisplay: 'Not By VE',
+    productDetailSlug: 'abigail',
+    thumbNail: '/images/products/not-by-ve/abigail/001.jpg',
+    images: ['/images/products/not-by-ve/abigail/001.jpg'],
+    name: 'Abigail',
+    variants: [
+      'with Monk Lite Gold Black',
+      'with Monk Lite Gold Black U',
+      'with Monk Lite SPC',
+      'with BIE no mic',
+      'with BIE 1click mic',
+      'with Smoke no mic',
+      'with monk spc',
+      'with monk spc u',
+      'with monk sm',
+      'with monk Smoke mic',
+    ],
+    description:
+      "Abigail is a NOT-By-VE product, we have a few of those that we didn't design and not willing to stick our name to it cuz of that,but this dongle is super awesome with our Monk Lite s cuz it has more than enough juice to spare for earbuds in general.",
+    createdTime: '2021-09-21T02:01:12.150Z',
+    minPrice: 10.0,
+    maxPrice: 30.0,
+  },
+  {
+    category: 'not-by-ve',
+    categoryDisplay: 'Not By VE',
+    productDetailSlug: 'avani',
+    thumbNail: '/images/products/not-by-ve/avani/001.jpg',
+    images: ['/images/products/not-by-ve/avani/001.jpg'],
+    name: 'AVANI',
+    variants: [
+      'with monk plus Smoke no mic',
+      'with monk Smoke mic-u',
+      'with monk plus spc',
+      'with monk plus spc mic-u',
+      'with monk lite Gold/Black',
+      'with monk lite Gold/Black mic-u',
+      'with monk lite SPC',
+      'with BIE no mic',
+      'with BIE mic-u',
+      'with monk sm',
+    ],
+    description:
+      "AVANI is a NOT-By-VE product, we have a few of those that we didn't design and not willing to stick our name to it cuz of that, but this dongle is super awesome with our monk plus cuz it has more than enough juice to spare for earbuds in general.",
+    createdTime: '2021-09-21T02:01:12.150Z',
+    minPrice: 10.0,
+    maxPrice: 30.0,
+  },
+];
+
+export const getPriceDisplay = (minPrice?: number, maxPrice?: number, symbol = '$') => {
+  if (typeof minPrice !== 'number' && typeof maxPrice !== 'number') return '';
+  if (typeof minPrice === 'number' && typeof maxPrice !== 'number') return `${symbol}${minPrice.toFixed(2)}`;
+  return `${symbol}${minPrice?.toFixed(2)} - ${maxPrice?.toFixed(2)}`;
+};

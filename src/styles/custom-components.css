@@ -1,0 +1,82 @@
+/* Custom swiper for product detail */
+
+.swiper-product-detail .swiper-button-prev{
+  color: #9b9b9b;
+  margin-left: 10px;
+  padding: 16px;
+  border-radius: 50%;
+  font-weight: 900;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-product-detail .swiper-button-prev::after{
+  padding: 12px;
+}
+
+.swiper-product-detail .swiper-button-prev:hover{
+  color: rgb(17, 17, 17);
+  background-color: white;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.swiper-product-detail .swiper-button-next{
+  color: #9b9b9b;
+  margin-right: 10px;
+  padding: 16px;
+  border-radius: 50%;
+  font-weight: 900;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-product-detail .swiper-button-next::after{
+  padding: 12px;
+}
+
+.swiper-product-detail .swiper-button-next:hover{
+  color: rgb(17, 17, 17);
+  background-color: white;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.swiper-product-thumbs {
+  margin: 10px 0;
+}
+
+.swiper-product-thumbs .swiper-slide{
+  margin: 1px 0;
+  width: calc((100vw - 38px)/7) !important;
+  height: calc((100vw - 38px)/7) !important;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-product-thumbs .swiper-slide:first-of-type{
+  margin-left: 2px;
+}
+
+.swiper-product-thumbs .swiper-slide:hover{
+  outline: 1px solid #000;
+  outline-offset: -1px
+}
+
+.swiper-product-thumbs .swiper-slide-thumb-active{
+  outline: 1px solid #000;
+}
+
+/* Hidden default increment number input HTML */
+/* Chrome, Safari, Edge, Opera */
+input.hidden-default-number-increment::-webkit-outer-spin-button,
+input.hidden-default-number-increment::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input.hidden-default-number-increment[type=number] {
+  -moz-appearance: textfield;
+}
