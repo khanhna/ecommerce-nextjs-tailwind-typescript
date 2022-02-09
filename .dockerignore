@@ -1,3 +1,8 @@
-node_modules/*
-.husky/*
-.next/*
+.git/
+.gitignore
+.husky/
+node_modules/
+.next/
+nginx/
+Dockerfile
+docker-compose.yml
